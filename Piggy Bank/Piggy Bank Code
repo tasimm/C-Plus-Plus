@@ -1,0 +1,25 @@
+// Program that takes the inputted number of Colombian Pesos, Brazilian Reais, and Peruvian Soles and converts to USD
+
+#include <iostream>
+
+int main() {
+  
+  double pesos, reais, soles, dollars;
+
+  std::cout << "Enter number of Pesos: ";
+  std::cin >> pesos;
+  std::cout << std::endl;
+
+  std::cout << "Enter number of Reais: ";
+  std::cin >> reais;
+  std::cout << std::endl;
+
+  std::cout << "Enter number of Soles: ";
+  std::cin >> soles;
+  std::cout << std::endl;
+
+  dollars = (0.00032*pesos) + (0.27*reais) + (0.3*soles);
+
+  std::cout << "US Dollars = $" << dollars;
+  
+}
