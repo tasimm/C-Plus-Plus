@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() 
+{
+  // Initials:
+  std::cout << "TTTTT\n";
+  std::cout << "  T\n";
+  std::cout << "  T\n";
+  std::cout << "  T\n";
+  std::cout << "  T\n";
+  std::cout << "  T\n";
+  std::cout << "  T\n";
+
+  std::cout << " SSS \n";
+  std::cout << "S   S\n";
+  std::cout << "S\n";
+  std::cout << " SSS \n";
+  std::cout << "    S\n";
+  std::cout << "S   S\n";
+  std::cout << " SSS \n";
+}
