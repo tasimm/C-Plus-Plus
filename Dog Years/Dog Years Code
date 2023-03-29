@@ -1,3 +1,5 @@
+// Practice project converting dog years to human years
+
 #include <iostream>
 
 int main() {
