@@ -1,0 +1,39 @@
+/* Program that takes a string and checks for consonants and vowels to replicate "whale talk". 
+If there are consonants, it replaces them with vowels. U's and E's are doubled */
+
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+
+string normal = "turpentine and turtles";
+
+vector<char> vowels = {'a', 'e', 'i', 'o', 'u'};
+
+vector<char> result;
+
+for (int i = 0; i < normal.size(); i++) {
+
+  for (int j = 0; j < vowels.size(); j++) {
+
+    if (normal[i] == vowels[j]) {
+      result.push_back(normal[i]);
+
+if (normal[i] == 'e' || normal[i] == 'u') {
+  result.push_back(normal[i]);
+}
+}
+
+}
+
+
+
+}
+
+for (int k = 0; k < result.size(); k++) {
+  cout << result[k];
+}
+
+}
