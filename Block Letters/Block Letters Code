@@ -1,3 +1,5 @@
+//Simple practice project outputting initials in a block format
+
 #include <iostream>
 
 int main() 
