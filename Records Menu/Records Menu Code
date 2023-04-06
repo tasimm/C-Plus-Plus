@@ -1,0 +1,100 @@
+// Program that allows the user to add, delete, and view data they input
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+
+void Menu()
+{
+	// User options
+	cout << "1. Add new record\n";
+	cout << "2. Delete record\n";
+	cout << "3. View records\n";
+	cout << "4. Quit\n";
+}
+
+int main()
+{
+	Menu();
+	// User's input
+	cout << "\nEnter your selection: ";
+	int selection;
+	cin >> selection;
+
+	// Created vector to store records the user adds
+	vector<string> AddRecord;
+
+	string add_record_name; // Variable to store the name of records user adds
+
+	// While loop ensures that user won't be booted from the menu while still making selections
+	while (selection == 1 || selection == 2 || selection == 3) { 
+		// Loop to navigate user selections
+		if (selection == 1) {
+
+			cout << "Enter record name: ";
+			cin >> add_record_name;
+
+			AddRecord.push_back(add_record_name);
+
+			cout << "Entered " << add_record_name << " to file\n";
+
+			cout << endl;
+
+			Menu();
+			cout << "\nEnter your selection: ";
+			cin >> selection;
+		}
+		if (selection == 2) {
+
+			cout << "Type the name of the record you wish to be deleted: \n";
+
+			// Created for loop to iterate through the records and output them to the console
+			for (int i = 0; i < AddRecord.size(); i++) {
+				cout << AddRecord[i] << endl;
+			}
+			string delete_record;
+			cin >> delete_record;
+
+			if (delete_record == add_record_name) {
+
+				erase(AddRecord, delete_record);
+				cout << "Successfully deleted " << delete_record << endl;
+			}
+			else {
+
+				cout << "Record not found or incorrectly typed\n";
+			}
+
+			Menu();
+			cout << "\nEnter your selection: ";
+			cin >> selection;
+		}
+		if (selection == 3) {
+
+			cout << "Record List\n";
+			cout << "------------\n";
+
+			for (int i = 0; i < AddRecord.size(); i++) {
+				cout << AddRecord[i] << endl;
+			}
+
+			cout << endl;
+
+			Menu();
+			cout << "\nEnter your selection: ";
+			cin >> selection;
+		}
+		if (selection == 4) {
+
+			cout << "Quitting...\n";
+		}
+		if (selection != 1 && selection != 2 && selection != 3 && selection != 4) {
+
+			cout << "Invalid option.\n";
+		}
+	}
+}
+
+
