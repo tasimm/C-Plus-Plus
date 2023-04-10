@@ -1,0 +1,43 @@
+// Another version of the Records menu program that utilizes functions
+
+#include <iostream>
+using namespace std;
+
+void showMenu() {				// function that contains the menu options
+	cout << "1. Search\n";
+	cout << "2. View Record\n";
+	cout << "3. Quit\n";
+}
+
+int getInput() {				// function that contains the user's ability to select from the menu
+	cout << "Enter selection: ";
+
+	int input;
+	cin >> input;
+
+	return input;
+}
+
+void processSelection(int option) {		// function that contains the output of the different options
+	switch (option) {
+	case 1:
+		cout << "Searching...\n";
+		break;
+	case 2:
+		cout << "Viewing...\n";
+		break;
+	case 3:
+		cout << "Quitting...\n";
+		break;
+	default:
+		cout << "Please select an item from the menu.\n";
+	}
+}
+
+int main()
+{
+	showMenu();					// calls the function to show the menu
+	int selection = getInput(); // creates a variable 'selection' to store the value of the user's input
+	processSelection(selection); // uses variable 'selection' as a parameter for the function
+	
+}
