@@ -1,1 +1,1 @@
-Project folder for practice C++ projects
+Project folder for beginner practice C++ projects
